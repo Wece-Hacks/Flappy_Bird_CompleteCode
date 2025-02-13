@@ -1,3 +1,6 @@
+
+///////////////////// Variable Elements ///////////////////////////////
+
 // Background scrolling speed
 let move_speed = 3;
   
@@ -23,6 +26,8 @@ let score_title =
   
 // Setting initial game state to start
 let game_state = 'Start';
+
+/////////////////////////// Start ////////////////////////////////////////
   
 // Add an eventlistener for key presses
 document.addEventListener('keydown', (e) => {
@@ -42,6 +47,9 @@ document.addEventListener('keydown', (e) => {
     play();
   }
 });
+
+//////////////////////////// Move /////////////////////////////////
+
 function play() {
   function move() {
     
@@ -97,6 +105,9 @@ function play() {
 
     requestAnimationFrame(move);
   }
+
+/////////////////////////////// Environment //////////////////////////////////
+
   requestAnimationFrame(move);
 
   let bird_dy = 0;
@@ -161,3 +172,5 @@ function play() {
   }
   requestAnimationFrame(create_pipe);
 }
+
+/////////////////////////////////////////////////////
