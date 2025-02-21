@@ -70,14 +70,16 @@ function play() {
       } else {
         // Collision detection with bird and pipes
         if (
-          bird_props.left < pipe_sprite_props.left +
-          pipe_sprite_props.width &&
-          bird_props.left +
-          bird_props.width > pipe_sprite_props.left &&
-          bird_props.top < pipe_sprite_props.top +
-          pipe_sprite_props.height &&
-          bird_props.top +
-          bird_props.height > pipe_sprite_props.top
+          // bird_props.left < pipe_sprite_props.left + pipe_sprite_props.width &&
+          // bird_props.left + bird_props.width > pipe_sprite_props.left &&
+          // bird_props.top < pipe_sprite_props.top + pipe_sprite_props.height &&
+          // bird_props.top + bird_props.height > pipe_sprite_props.top
+
+          // Hi this is Anna, I simplified the code :)
+          bird_props.left < pipe_sprite_props.right &&
+          bird_props.right > pipe_sprite_props.left &&
+          bird_props.top < pipe_sprite_props.bottom &&
+          bird_props.bottom > pipe_sprite_props.top
         ) {
           
           // Change game state and end the game
